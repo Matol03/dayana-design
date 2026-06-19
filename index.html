@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dayana Design — Websites Made to Order</title>
+  <meta name="description" content="Dayana Design builds beautiful, custom websites for companies and individuals. Browse ready-made templates or commission your own." />
+
+  <!-- Stripe Buy Button script (loads the embeddable buy buttons) -->
+  <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav">
+    <a href="#top" class="nav__logo">Dayana<span>.</span></a>
+    <nav class="nav__links">
+      <a href="#work">Work</a>
+      <a href="#templates">Templates</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="top" class="hero">
+    <div class="hero__text">
+      <p class="eyebrow">Web Designer &amp; Developer</p>
+      <h1>I build websites<br />that people <em>remember</em>.</h1>
+      <p class="hero__sub">
+        Custom sites for companies and individuals — minimal, bold, and built
+        to convert. Commission a one-of-a-kind design or buy a ready-made
+        template below.
+      </p>
+      <div class="hero__actions">
+        <a href="#templates" class="btn btn--solid">Browse templates</a>
+        <a href="#contact" class="btn btn--ghost">Start a project</a>
+      </div>
+    </div>
+    <div class="hero__photo">
+      <!-- Replace assets/portrait.jpg with your own photo -->
+      <img src="assets/portrait.jpg" alt="Portrait of Dayana" onerror="this.classList.add('placeholder');this.alt='Add your photo at assets/portrait.jpg'" />
+      <div class="hero__badge">Available for new projects</div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE / CREDENTIALS STRIP ===== -->
+  <div class="marquee">
+    <div class="marquee__track">
+      <span>Branding</span><span>•</span><span>Web Design</span><span>•</span>
+      <span>Development</span><span>•</span><span>E-commerce</span><span>•</span>
+      <span>SEO</span><span>•</span><span>Branding</span><span>•</span>
+      <span>Web Design</span><span>•</span><span>Development</span><span>•</span>
+      <span>E-commerce</span><span>•</span><span>SEO</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- ===== WORK / SELECTED PROJECTS ===== -->
+  <section id="work" class="section">
+    <div class="section__head">
+      <h2>Selected work</h2>
+      <p>A few sites I've shipped for clients across different industries.</p>
+    </div>
+
+    <div class="work-grid">
+      <article class="work-card work-card--coral">
+        <div class="work-card__shot">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen">
+              <span class="mock__hero"></span>
+              <span class="mock__line"></span>
+              <span class="mock__line mock__line--sm"></span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card__meta">
+          <h3>Lumen Studio</h3>
+          <p>Architecture firm · Brand &amp; website</p>
+        </div>
+      </article>
+
+      <article class="work-card work-card--violet">
+        <div class="work-card__shot">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen">
+              <span class="mock__hero"></span>
+              <span class="mock__line"></span>
+              <span class="mock__line mock__line--sm"></span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card__meta">
+          <h3>Bean &amp; Co</h3>
+          <p>Coffee roaster · E-commerce</p>
+        </div>
+      </article>
+
+      <article class="work-card work-card--teal">
+        <div class="work-card__shot">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen">
+              <span class="mock__hero"></span>
+              <span class="mock__line"></span>
+              <span class="mock__line mock__line--sm"></span>
+            </div>
+          </div>
+        </div>
+        <div class="work-card__meta">
+          <h3>Atlas Fitness</h3>
+          <p>Gym &amp; coaching · Booking site</p>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== TEMPLATES GALLERY (with Stripe buy buttons) ===== -->
+  <section id="templates" class="section section--tint">
+    <div class="section__head">
+      <h2>Templates &amp; packages</h2>
+      <p>Ready to launch fast? Pick a template or package and buy it instantly.</p>
+    </div>
+
+    <div class="template-grid">
+
+      <!-- Template card -->
+      <article class="tmpl tmpl--coral">
+        <div class="tmpl__preview">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen">
+              <span class="mock__hero"></span>
+              <span class="mock__line"></span>
+              <span class="mock__line mock__line--sm"></span>
+            </div>
+          </div>
+          <span class="tmpl__tag">Landing page</span>
+        </div>
+        <div class="tmpl__body">
+          <div class="tmpl__top">
+            <h3>Aurora</h3>
+            <span class="tmpl__price">$149</span>
+          </div>
+          <p>A bold single-page site for product launches and personal brands.</p>
+          <div class="buy-slot" data-template="aurora">
+            <!-- STRIPE: replace with your real <stripe-buy-button> (see README) -->
+            <a class="btn btn--solid btn--full" href="#contact">Buy Aurora</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Template card -->
+      <article class="tmpl tmpl--violet">
+        <div class="tmpl__preview">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen mock__screen--grid">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <span class="tmpl__tag">Portfolio</span>
+        </div>
+        <div class="tmpl__body">
+          <div class="tmpl__top">
+            <h3>Studio</h3>
+            <span class="tmpl__price">$199</span>
+          </div>
+          <p>A multi-page portfolio for creatives, studios and freelancers.</p>
+          <div class="buy-slot" data-template="studio">
+            <a class="btn btn--solid btn--full" href="#contact">Buy Studio</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Template card -->
+      <article class="tmpl tmpl--teal">
+        <div class="tmpl__preview">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen mock__screen--grid">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <span class="tmpl__tag">E-commerce</span>
+        </div>
+        <div class="tmpl__body">
+          <div class="tmpl__top">
+            <h3>Market</h3>
+            <span class="tmpl__price">$349</span>
+          </div>
+          <p>A clean storefront with cart and checkout, ready for your products.</p>
+          <div class="buy-slot" data-template="market">
+            <a class="btn btn--solid btn--full" href="#contact">Buy Market</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Template card -->
+      <article class="tmpl tmpl--amber">
+        <div class="tmpl__preview">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen">
+              <span class="mock__hero"></span>
+              <span class="mock__line"></span>
+              <span class="mock__line mock__line--sm"></span>
+            </div>
+          </div>
+          <span class="tmpl__tag">Business</span>
+        </div>
+        <div class="tmpl__body">
+          <div class="tmpl__top">
+            <h3>Bloom</h3>
+            <span class="tmpl__price">$249</span>
+          </div>
+          <p>A friendly small-business site with services, pricing and contact.</p>
+          <div class="buy-slot" data-template="bloom">
+            <a class="btn btn--solid btn--full" href="#contact">Buy Bloom</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Template card -->
+      <article class="tmpl tmpl--coral">
+        <div class="tmpl__preview">
+          <div class="mock" aria-hidden="true">
+            <div class="mock__bar"><i></i><i></i><i></i></div>
+            <div class="mock__screen mock__screen--grid">
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <span class="tmpl__tag">SaaS</span>
+        </div>
+        <div class="tmpl__body">
+          <div class="tmpl__top">
+            <h3>Pulse</h3>
+            <span class="tmpl__price">$399</span>
+          </div>
+          <p>A modern SaaS marketing site with pricing tables and features.</p>
+          <div class="buy-slot" data-template="pulse">
+            <a class="btn btn--solid btn--full" href="#contact">Buy Pulse</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Custom card -->
+      <article class="tmpl tmpl--dark">
+        <div class="tmpl__body tmpl__body--center">
+          <h3>Need something custom?</h3>
+          <p>Fully bespoke design and build, tailored to your brand from scratch.</p>
+          <span class="tmpl__price tmpl__price--from">from $1,200</span>
+          <a class="btn btn--light btn--full" href="#contact">Request a quote</a>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ===== ABOUT / CREDENTIALS ===== -->
+  <section id="about" class="about">
+    <div class="about__photo">
+      <img src="assets/about.jpg" alt="Dayana working" onerror="this.classList.add('placeholder')" />
+    </div>
+    <div class="about__text">
+      <p class="eyebrow">About me</p>
+      <h2>Hi, I'm Dayana.</h2>
+      <p>
+        I'm a designer and developer who helps companies and individuals show
+        up online with clarity and confidence. I care about clean layouts,
+        confident color, and websites that load fast and feel effortless.
+      </p>
+
+      <div class="creds">
+        <div class="cred">
+          <strong>80+</strong>
+          <span>Projects delivered</span>
+        </div>
+        <div class="cred">
+          <strong>7 yrs</strong>
+          <span>Design experience</span>
+        </div>
+        <div class="cred">
+          <strong>100%</strong>
+          <span>Happy clients</span>
+        </div>
+      </div>
+
+      <ul class="cred-list">
+        <li>Custom design &amp; front-end development</li>
+        <li>Responsive, accessible &amp; SEO-friendly builds</li>
+        <li>E-commerce &amp; Stripe payment integration</li>
+        <li>Brand identity &amp; visual systems</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="contact">
+    <div class="contact__inner">
+      <div class="contact__avatar">
+        <img src="assets/contact.jpg" alt="Dayana" onerror="this.classList.add('placeholder')" />
+      </div>
+      <p class="eyebrow eyebrow--light">Contact me</p>
+      <h2>Let's build something<br />worth bookmarking.</h2>
+      <p class="contact__sub">
+        Tell me about your project, or just say hello. I usually reply within
+        a day.
+      </p>
+      <a href="mailto:hello@dayana.design?subject=New%20website%20project" class="btn btn--light btn--lg">
+        Contact me
+      </a>
+      <div class="contact__alt">
+        <a href="mailto:hello@dayana.design">hello@dayana.design</a>
+        <span>·</span>
+        <a href="#templates">Or buy a template</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <span>© <span id="year"></span> Dayana Design</span>
+    <div class="footer__links">
+      <a href="#work">Work</a>
+      <a href="#templates">Templates</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
