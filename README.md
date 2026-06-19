@@ -38,36 +38,32 @@ Open `index.html` and change:
 - Your stats in **About** (`80+`, `7 yrs`, etc.)
 - Your email — search for `hello@dayana.design` and replace everywhere
 
-## 3. Connect Stripe (Buy buttons)
+## 3. Stripe (Buy buttons) — already wired
 
-The Stripe script is already loaded in `<head>`. Each template has a `buy-slot`
-with a placeholder button. Replace each placeholder with your real Stripe Buy
-Button.
+Each template's Buy button links to a **Stripe Payment Link** and opens Stripe
+Checkout in a new tab. The links live directly on the `<a>` in each `buy-slot`
+in `index.html`:
 
-### Create a Buy Button (easiest, no backend)
-1. In the [Stripe Dashboard](https://dashboard.stripe.com/buy-buttons), create a
-   product for each template and click **Create buy button**.
-2. Stripe gives you a snippet like this:
+| Template | `buy-slot` | Payment Link |
+|----------|-----------|--------------|
+| Aurora | `data-template="aurora"` | `.../test_dRm3cxex1bGPbdSaCY08g00` |
+| Studio | `data-template="studio"` | `.../test_fZu14pex1fX53LqaCY08g01` |
+| Market | `data-template="market"` | `.../test_00w6oJ4WrdOX4Pu8uQ08g02` |
+| Bloom  | `data-template="bloom"`  | `.../test_3cI9AV74zh190zecL608g03` |
+| Pulse  | `data-template="pulse"`  | `.../test_7sY00l1Kf6mv81GdPa08g04` |
 
-   ```html
-   <stripe-buy-button
-     buy-button-id="buy_btn_XXXXXXXXXXXX"
-     publishable-key="pk_live_XXXXXXXXXXXX">
-   </stripe-buy-button>
-   ```
-3. In `index.html`, find the matching `buy-slot`, e.g.:
+### ⚠️ These are TEST links — switch to live before selling
+The URLs contain `test_`, so they use Stripe **test mode** (no real money; use
+card `4242 4242 4242 4242`, any future expiry/CVC to try checkout).
 
-   ```html
-   <div class="buy-slot" data-template="aurora">
-     <a class="btn btn--solid btn--full" href="#contact">Buy Aurora</a>
-   </div>
-   ```
-   Replace the `<a>...</a>` placeholder with your `<stripe-buy-button>` snippet.
+When you're ready to take real payments:
+1. Toggle off **Test mode** in the [Stripe Dashboard](https://dashboard.stripe.com).
+2. Recreate each Payment Link in **live mode** (or flip the existing ones live).
+3. In `index.html`, replace each `href` with the live URL (it will **not** have
+   `test_` in it). Find them by searching for `buy.stripe.com`.
 
-Repeat for each template (Aurora, Studio, Market, Bloom, Pulse).
-
-> Prefer a simple link instead? Create a **Payment Link** in Stripe and set it as
-> the button's `href`: `<a class="btn btn--solid btn--full" href="https://buy.stripe.com/...">Buy</a>`
+To change a price/product, edit the Payment Link in Stripe — no code change
+needed. To add a template, copy a `tmpl` card block and set its `href`.`
 
 ## 4. Contact button
 
