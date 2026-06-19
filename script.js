@@ -15,7 +15,7 @@ const io = new IntersectionObserver(
   { threshold: 0.12 }
 );
 
-document.querySelectorAll(".work-card, .tmpl").forEach((el) => {
+document.querySelectorAll(".work-card, .work-feature, .tmpl").forEach((el) => {
   el.style.opacity = "0";
   el.style.transform = "translateY(24px)";
   el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
